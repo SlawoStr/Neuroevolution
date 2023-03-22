@@ -104,6 +104,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir);</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -118,6 +120,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir);</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,7 +131,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Layer.cpp" />
+    <ClCompile Include="src\NeuralNetwork.cpp" />
+    <ClCompile Include="src\Neuroevolution.cpp" />
     <ClCompile Include="src\Source.cpp" />
+    <ClCompile Include="src\Utility\RNGGenerator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\CrossoverAlgo\GeneticCrossover.h" />
+    <ClInclude Include="src\CrossoverAlgo\MPCCrossover.h" />
+    <ClInclude Include="src\CrossoverAlgo\SPCCrossover.h" />
+    <ClInclude Include="src\CrossoverAlgo\UniformCrossover.h" />
+    <ClInclude Include="src\Layer.h" />
+    <ClInclude Include="src\MutationAlgo\AddMutation.h" />
+    <ClInclude Include="src\MutationAlgo\GeneticMutator.h" />
+    <ClInclude Include="src\MutationAlgo\NewMutation.h" />
+    <ClInclude Include="src\MutationAlgo\ProcMutation.h" />
+    <ClInclude Include="src\MutationAlgo\SignMutation.h" />
+    <ClInclude Include="src\NeuralNetwork.h" />
+    <ClInclude Include="src\Neuroevolution.h" />
+    <ClInclude Include="src\Neuron.h" />
+    <ClInclude Include="src\SelectionAlgo\GeneticSelector.h" />
+    <ClInclude Include="src\SelectionAlgo\TournamentSelection.h" />
+    <ClInclude Include="src\SelectionAlgo\TruncationSelection.h" />
+    <ClInclude Include="src\SelectionAlgo\WheelSelection.h" />
+    <ClInclude Include="src\Utility\GeneticAlgorithmBadInput.h" />
+    <ClInclude Include="src\Utility\NetworkEnum.h" />
+    <ClInclude Include="src\Utility\NetworkInputExcepction.h" />
+    <ClInclude Include="src\Utility\RandomNumberGenerator.h" />
+    <ClInclude Include="src\Utility\RNGGenerator.h" />
+    <ClInclude Include="src\Utility\Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
