@@ -2,6 +2,8 @@
 
 Implementation of classical neuroevolution. 
 
+# Implemented algorithms
+
 Selection Algorithms:
 
 - Truncation Selection
