@@ -21,6 +21,8 @@ Mutation Algorithms:
 - Change weight sign
 - Scale weight by a value
 
+# Usage   
+
 ```c
 // Create neural network
 NeuralNetwork network(30, 10, ActivationFunction::SIGMOID);
