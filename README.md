@@ -30,8 +30,8 @@ network.addLayer(15, ActivationFunction::RELU);
 Neuroevolution manager(network, modelNumber, parentPairNumber, threadNumber);
 // Set genetic operators
 manager.setSelection<WheelSelection>(modelNumber);
-manager.setCrossover<MPCCrossover>(0.9f);
-manager.setMutation<NewMutation>(1.0f, 0.1f);
+manager.setCrossover<MPCCrossover>(crossoverProb);
+manager.setMutation<NewMutation>(mutationProb, geneMutationProb);
 // Run neuroevolution by sending results of neural network models (fitness function resutlts)
 manager.run(fitnessVec);
 ```
