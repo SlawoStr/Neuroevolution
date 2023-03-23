@@ -16,8 +16,8 @@ Crossover Algorithms:
 
 Mutation Algorithms:
 
-- Add random value
-- Generate new value
-- Change sign
-- Scale value
+- Add random value to weight
+- Generate new weight value
+- Change weight sign
+- Scale weight by a value
 
