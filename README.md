@@ -27,7 +27,7 @@ NeuralNetwork network(30, 10, ActivationFunction::SIGMOID);
 network.addLayer(25, ActivationFunction::RELU);
 network.addLayer(15, ActivationFunction::RELU);
 // Create neuroevolution
-Neuroevolution manager(network, modelNumber, parentPairNumber, i);
+Neuroevolution manager(network, modelNumber, parentPairNumber, threadNumber);
 // Set genetic operators
 manager.setSelection<WheelSelection>(modelNumber);
 manager.setCrossover<MPCCrossover>(0.9f);
