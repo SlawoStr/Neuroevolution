@@ -21,3 +21,17 @@ Mutation Algorithms:
 - Change weight sign
 - Scale weight by a value
 
+```c
+// Create neural network
+NeuralNetwork network(30, 10, ActivationFunction::SIGMOID);
+network.addLayer(25, ActivationFunction::RELU);
+network.addLayer(15, ActivationFunction::RELU);
+// Create neuroevolution
+Neuroevolution manager(network, modelNumber, parentPairNumber, i);
+// Set genetic operators
+manager.setSelection<WheelSelection>(modelNumber);
+manager.setCrossover<MPCCrossover>(0.9f);
+manager.setMutation<NewMutation>(1.0f, 0.1f);
+// Run neuroevolution by sending results of neural network models (fitness function resutlts)
+manager.run(fitnessVec);
+```
